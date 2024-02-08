@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ex2evPeioHernando</string>
+    <string name="iniciar_applicacion">Iniciar applicacion</string>
+    <string name="ver_informacion">Ver Informacion</string>
+    <string name="ver_mapa">Ver Mapa</string>
+    <string name="textoFragInfoDesciption1">Parque que se ha convertido en epicentro del Ourense moderno; en su entorno se desarrolla, junto a los edificios administrativos, la principal actividad comercial y económica de la ciudad. Antaño fue lugar del hospital de peregrinos o lazareto, de donde toma el nombre, lo que indica que se trataba de un lugar apartado del centro urbano.</string>
+    <string name="titulaFragInfoParque">Parque San Lazaro</string>
+    <string name="volver_al_marcador">Volver al marcador</string>
 </resources>

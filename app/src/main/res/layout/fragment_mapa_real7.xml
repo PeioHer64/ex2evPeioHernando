@@ -30,7 +30,7 @@
         android:layout_width="211dp"
         android:layout_height="49dp"
         android:backgroundTint="#9799FA"
-        android:text="Volver al marcador"
+        android:text="@string/volver_al_marcador"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

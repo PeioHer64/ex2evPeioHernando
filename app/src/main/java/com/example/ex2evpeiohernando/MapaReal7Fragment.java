@@ -2,7 +2,6 @@ package com.example.ex2evpeiohernando;
 
 import android.Manifest;
 import android.content.Context;
-import android.location.Location;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
@@ -20,8 +19,6 @@ import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.OverlayItem;
-import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider;
-import org.osmdroid.views.overlay.mylocation.IMyLocationProvider;
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay;
 
 /**
@@ -38,7 +35,7 @@ public class MapaReal7Fragment extends Fragment {
     IMapController mapController;
 
     Button buttonMyPlace;
-    Button buttonIruna;
+    Button buttonSeeMarker;
     GeoPoint geoPoint;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -87,7 +84,7 @@ public class MapaReal7Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_mapa_real7, container, false);
 
         //buttonMyPlace = view.findViewById(R.id.buttonPosMap);
-        buttonIruna = view.findViewById(R.id.buttonIruMap);
+        buttonSeeMarker = view.findViewById(R.id.buttonIruMap);
 
         map = view.findViewById(R.id.mapview);
         System.out.println("map is this");
@@ -109,7 +106,7 @@ public class MapaReal7Fragment extends Fragment {
 //
 //        });
 
-        buttonIruna.setOnClickListener(new View.OnClickListener() {
+        buttonSeeMarker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 geoPoint.setCoords(42.34151909489235, -7.86381655047069);
@@ -176,8 +173,8 @@ public class MapaReal7Fragment extends Fragment {
 
 
     private void setupMap() {
-        System.out.println("SETTTUUUUPPPPPPPPPP");
-        System.out.println("mapp value:"+map);
+//        System.out.println("SETTTUUUUPPPPPPPPPP");
+//        System.out.println("mapp value:"+map);
 
 
         map.setTileSource(TileSourceFactory.DEFAULT_TILE_SOURCE);
@@ -286,18 +283,7 @@ public class MapaReal7Fragment extends Fragment {
 
 
 
-    public boolean onItemLongPress(final int index, final OverlayItem item) {
-        if (item.getTitle().equals("Parque de San Lazaro")) {
-            System.out.println("has clickado en parke");
-        } else if (item.getTitle().equals("Museo Rialia")) {
-            //((VistaMapa) getActivity()).mandar(1);
-        } else if (item.getTitle().equals("Torre Salazar")) {
-            //((VistaMapa) getActivity()).mandar(2);
-        } else if (item.getTitle().equals("Campo de Futbol La Florida")) {
-            //((VistaMapa) getActivity()).mandar(3);
-        }
-        return false;
-    }
+
 
 
 
