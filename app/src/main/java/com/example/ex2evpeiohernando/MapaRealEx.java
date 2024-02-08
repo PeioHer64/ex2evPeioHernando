@@ -32,7 +32,7 @@ public class MapaRealEx extends AppCompatActivity {
         //fragmentTransaction.commit();
 
 
-
+//por defecto pongo visible solo el boton de mapa porque es el fragment que esta puesto por al inicio
         btnFragInfo.setVisibility(View.VISIBLE);
         btnFragMapa.setVisibility(View.INVISIBLE);
 
@@ -41,11 +41,6 @@ public class MapaRealEx extends AppCompatActivity {
 
 
         btnFragInfo.setOnClickListener(v -> {
-//            FragmentManager fragmentManager = getSupportFragmentManager();
-//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//
-//            Fragment fragment = fragmentManager.findFragmentById(R.id.idFragmentMap);
-
 
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -57,7 +52,7 @@ public class MapaRealEx extends AppCompatActivity {
                 nuevoFragment = new InfoFragment1();
             } else if (fragment instanceof MapaReal7Fragment) {
                 nuevoFragment = new InfoFragment1();
-            }
+            } //el ultimo else no es necesario pero lo pongo por sea caso le das muy rapido al boton o el programa se confunde de fragment en el que estas
 
             assert nuevoFragment != null;
             fragmentTransaction.replace(R.id.idFragmentMap, nuevoFragment);
@@ -69,11 +64,6 @@ public class MapaRealEx extends AppCompatActivity {
 
 
         btnFragMapa.setOnClickListener(v -> {
-//            FragmentManager fragmentManager = getSupportFragmentManager();
-//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//
-//            Fragment fragment = fragmentManager.findFragmentById(R.id.idFragmentMap);
-
 
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

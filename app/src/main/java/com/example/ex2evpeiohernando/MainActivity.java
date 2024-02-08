@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent PageMapaReal = new Intent(this, MapaRealEx.class);
 
+        //boton de inicio para ir a al activity principal de la applicacion
         pageMapaRealButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

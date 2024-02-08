@@ -76,7 +76,7 @@ public class MapaReal7Fragment extends Fragment {
 
         //return inflater.inflate(R.layout.fragment_mapa_real7, container, false);
 
-
+//inflacion de el fragment y decalracion de botones, mapview y demas
         Context ctx = requireActivity();
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
         Configuration.getInstance().setUserAgentValue(requireActivity().getPackageName());
@@ -106,6 +106,8 @@ public class MapaReal7Fragment extends Fragment {
 //
 //        });
 
+
+        //este boton te reajusta o centra la vision en cuanto al marker en el mapa
         buttonSeeMarker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,51 +132,12 @@ public class MapaReal7Fragment extends Fragment {
 
 
 
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        if (getArguments() != null) {
-//            mParam1 = getArguments().getString(ARG_PARAM1);
-//            mParam2 = getArguments().getString(ARG_PARAM2);
-//        }
-//
-//
-//
-////        Context ctx = requireActivity();
-////        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
-////        Configuration.getInstance().setUserAgentValue(getPackageName());
-//
-//        //setContentView(R.layout.activity_mapa_real);
-//
-//
-//
-//
-//
-//        // Verificar permisos de ubicación
-////        while (permiso == 0) {
-////            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-////                    && ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION)
-////                    != PackageManager.PERMISSION_GRANTED) { //AndroidManifest
-////
-////            } else {
-////                setupMap();
-////                permiso++;
-////            }
-////        }
-//
-//
-//
-//
-//
-//
-//
-//    }
+
 
 
 
     private void setupMap() {
-//        System.out.println("SETTTUUUUPPPPPPPPPP");
-//        System.out.println("mapp value:"+map);
+
 
 
         map.setTileSource(TileSourceFactory.DEFAULT_TILE_SOURCE);
@@ -197,7 +160,6 @@ public class MapaReal7Fragment extends Fragment {
         map.setTileSource(TileSourceFactory.MAPNIK);
 
 // Habilitar el uso de la ubicación del dispositivo
-
 //        GpsMyLocationProvider locationProvider = new GpsMyLocationProvider(requireActivity());
 //        MyLocationNewOverlay finalMyLocationOverlay = myLocationOverlay;
 //        myLocationOverlay = new MyLocationNewOverlay(locationProvider, map) {
@@ -262,7 +224,7 @@ public class MapaReal7Fragment extends Fragment {
         map.onPause();  //needed for compass, my location overlays, v6.0.0 and up
     }
 
-
+//metodo para anadir marcador al mapView
     private void addMarker(double latitude, double longitude, String title) {
 
         org.osmdroid.views.overlay.Marker marker = new org.osmdroid.views.overlay.Marker(map);
@@ -275,7 +237,7 @@ public class MapaReal7Fragment extends Fragment {
     }
 
 
-    //pop-up
+    //metodo para mostrar pop up, no estoy seguro de si lo uso para lo del nombre que sale al clicar el marcador o no la verdad
     private void showMessage(String message) {
         Toast.makeText(requireActivity(), message, Toast.LENGTH_SHORT).show();
     }
